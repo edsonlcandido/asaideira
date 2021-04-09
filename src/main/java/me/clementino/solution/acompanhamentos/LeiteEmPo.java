@@ -1,16 +1,20 @@
 package me.clementino.solution.acompanhamentos;
 
-public class LeiteEmPo {
+import me.clementino.v1.acai.Acai;
+
+public class LeiteEmPo extends PadraoDeProjeto{
 
     private final double preco;
 
-    public LeiteEmPo() {
-        preco = 1.99;
+    public LeiteEmPo(Acai acai) {
+        super(acai);
+        descricao = super.getDescricao() + " com leite em pó";
+        preco = super.getPreco() + 1.99;
     }
 
 
     public String getDescricao() {
-        return " com leite em pó";
+        return descricao;
     }
 
     public double getPreco() {
